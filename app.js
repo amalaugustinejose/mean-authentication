@@ -28,7 +28,7 @@ const users = require('./routes/users');
 
 // Port Number
 
-const port = 3002;
+const port = 3006;
 
 // CORS Middleware
 
@@ -41,6 +41,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Body Parser Middleware
 
 app.use(bodyParser.json());
+
+// Passport mIddleware
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 
 app.use('/users', users);
 
