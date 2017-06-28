@@ -28,7 +28,7 @@ const users = require('./routes/users');
 
 // Port Number
 
-const port = 3006;
+const port = 3000;
 
 // CORS Middleware
 
